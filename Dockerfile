@@ -14,6 +14,7 @@ ENV PATH $PATH:$GOROOT/bin:$GOPATH/bin
 
 RUN go get -u github.com/gpmgo/gopm
 
+RUN mkdir -p $GOPATH/src/github.com/dockerboard
 WORKDIR /gopath/src/
 RUN git clone https://github.com/dockboard/docker-proxy.git github.com/dockerboard/docker-proxy
 WORKDIR /gopath/src/github.com/dockerboard/docker-proxy
